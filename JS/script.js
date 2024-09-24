@@ -20,6 +20,11 @@ function clearDisplay() {
     resultDisplayed = false;
 }
 
+function deleteChar() {
+    let display = document.getElementById('display').value;
+    document.getElementById('display').value = display.slice(0, -1);
+}
+
 function calculate() {
     let display = document.getElementById('display').value;
     try {
