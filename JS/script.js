@@ -19,3 +19,14 @@ function clearDisplay() {
     document.getElementById('display').value = '';
     resultDisplayed = false;
 }
+
+function calculate() {
+    let display = document.getElementById('display').value;
+    try {
+        document.getElementById('display').value = eval(display);
+        resultDisplayed = true;
+    } catch {
+        document.getElementById('display').value = 'Erro';
+        resultDisplayed = true;
+    }
+}
